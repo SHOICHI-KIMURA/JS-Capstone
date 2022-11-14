@@ -111,6 +111,9 @@ class SceneMain extends Phaser.Scene {
     this.song = this.sound.add('battleTheme', { volume: 0.1 });
     this.song.play();
 
+    console.log("create!!");
+   	this.add.image(480/2, 640/2, "sprBg0");// 画面の中心に表示します
+
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {
       const bg = new ScrollingBackground(this, 'sprBg0', i * 10);
@@ -334,9 +337,9 @@ class SceneMain extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.backgrounds.length; i += 1) {
-      this.backgrounds[i].update();
-    }
+    // for (let i = 0; i < this.backgrounds.length; i += 1) {
+    //   this.backgrounds[i].update();
+    // }
   }
 
   getEnemiesByType(type) {
